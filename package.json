@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/client",
+    "packages/server"
+  ],
+  "scripts": {
+    "client": "yarn workspace client",
+    "server": "yarn workspace server"
+  },
+  "dependencies": {
+    "maid": "^0.3.0"
+  }
+}
