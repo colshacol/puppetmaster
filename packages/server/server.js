@@ -9,19 +9,7 @@ const addTestToList = require('./api/v0/tests/addTestToList')
 const start = async () => {
   const server = createHttpServer({
     port: 3001,
-    routes: [
-      getTest,
-      getTests,
-      getTestList,
-      addTestToList,
-      {
-        method: 'get',
-        match: '/',
-        handler(context) {
-          context.response.end('<html><body><h1>V1 Login</h1></body></html>')
-        },
-      },
-    ],
+    routes: [getTest, getTests, getTestList, addTestToList],
     routePrefix: '/api/v0',
   })
 }

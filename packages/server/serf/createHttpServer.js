@@ -6,7 +6,6 @@ const createHttpServer = (options) => {
   const route = registerRoutes(options)
 
   const server = http.createServer((request, response) => {
-    console.log('got a request', request.url)
     route(request, response, finalhandler(request, response))
   })
 
